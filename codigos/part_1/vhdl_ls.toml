@@ -1,4 +1,12 @@
 [libraries]
+
+lib3.files = [
+	'counter.vhd',
+]
+
 lib2.files = [
 	'counter_k.vhd',
+]
+lib1.files = [
+	'register_g.vhd',
 ]
