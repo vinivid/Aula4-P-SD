@@ -1,0 +1,4 @@
+[libraries]
+lib2.files = [
+	'counter_k.vhd',
+]
