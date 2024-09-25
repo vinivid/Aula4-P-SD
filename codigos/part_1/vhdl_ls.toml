@@ -1,5 +1,9 @@
 [libraries]
 
+lib6.files = [
+	'reg_test.vhd',
+]
+
 lib5.files = [
 	'let_selection.vhd',
 ]
