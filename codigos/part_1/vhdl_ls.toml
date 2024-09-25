@@ -1,5 +1,13 @@
 [libraries]
 
+lib5.files = [
+	'let_selection.vhd',
+]
+
+lib4.files = [
+	'shy_reg.vhd',
+]
+
 lib3.files = [
 	'counter.vhd',
 ]
