@@ -4,29 +4,27 @@ use IEEE.numeric_std.all;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity counter is
+    generic (
+        bits_maximo : NATURAL := 4
+    );
     port (
-        Clock : in STD_LOGIC;
-        Enable : in STD_LOGIC;
-        Clear_all : in STD_LOGIC;
-        Counter : out STD_LOGIC_VECTOR(3 downto 0)
+        clk : in STD_LOGIC;
+        enable : in STD_LOGIC;
+        reset : in STD_LOGIC;
+        counter : buffer STD_LOGIC_VECTOR(bits_maximo - 1 downto 0)
     );
 end entity;
 
 architecture Behaviour of counter is
-
-signal save_counter : STD_LOGIC_VECTOR (25 downto 0);
-signal display_counter : STD_LOGIC_VECTOR (3 downto 0);
-
 begin
-    process (Clock)
+    process (clk, reset)
     begin
-        if (rising_edge(Clock)) then
-            if (Clear_all = '1') then
-                save_counter <= "00000000000000000000000000";
-				display_counter <= "0000";
-            elsif (Enable = '1') then
+        if (rising_edge(clk)) then
+            if (reset =  '1') then
+                counter <= (others => '0');
+            elsif (enable = '1') then
                 --é necessario usar std logic unsigned para somar
-                save_counter <= save_counter + 1;
+                counter <= counter + 1;
 				if (save_counter = "10111110101111000010000000") then
 					if (display_counter = "1001") then
 						display_counter <= "0000";

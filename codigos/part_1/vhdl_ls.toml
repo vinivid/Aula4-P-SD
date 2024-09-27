@@ -1,15 +1,11 @@
 [libraries]
 
-lib6.files = [
-	'reg_test.vhd',
-]
-
 lib5.files = [
 	'let_selection.vhd',
 ]
 
 lib4.files = [
-	'shy_reg.vhd',
+	'logic_unit.vhd',
 ]
 
 lib3.files = [
@@ -20,5 +16,5 @@ lib2.files = [
 	'counter_k.vhd',
 ]
 lib1.files = [
-	'register_g.vhd',
+	'roll_over.vhd',
 ]
