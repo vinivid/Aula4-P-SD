@@ -1,7 +1,11 @@
 [libraries]
 
+lib4.files = [
+	'shift_test.vhd',
+]
+
 lib3.files = [
-	'tst.vhd',
+	'shift_symbol.vhd',
 ]
 
 lib2.files = [
