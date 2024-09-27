@@ -11,23 +11,21 @@ entity register_g is
         reset : in std_logic;
         enable : in std_logic;
         data : in STD_LOGIC_VECTOR (n - 1 downto 0);
-        data_out : OUT STD_LOGIC_VECTOR (n - 1 downto 0)
+        data_out : BUFFER STD_LOGIC_VECTOR (n - 1 downto 0)
     );
 end entity;
 
 architecture Behavour of register_g is
-    signal save_data : STD_LOGIC_VECTOR (n - 1 downto 0);
 begin
-    process (clk)
+    process (clk, reset)
     begin
         if (rising_edge(clk)) then 
             if (reset = '1') then
-                save_data <= (others => '0');
+                data_out <= (others => '0');
             elsif (enable = '1') then
-                save_data <= data;
+                data_out <= data;
             end if;
         end if;
     end process;
     
-    data_out <= save_data;
 end architecture Behavour;
