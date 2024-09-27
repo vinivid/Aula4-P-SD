@@ -9,7 +9,7 @@ entity shift_symbol is
         reset : IN STD_LOGIC;
         pos : IN INTEGER := 0;
         data_in : IN STD_LOGIC_VECTOR (3 downto 0);
-        data_out : OUT STD_LOGIC 
+        data_out : OUT STD_LOGIC := '0'
     );
 end entity shift_symbol;
 

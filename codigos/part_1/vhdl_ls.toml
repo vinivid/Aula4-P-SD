@@ -1,7 +1,11 @@
 [libraries]
 
+lib5.files = [
+	'logic_unit.vhd',
+]
+
 lib4.files = [
-	'shift_test.vhd',
+	'proc_symbol.vhd',
 ]
 
 lib3.files = [

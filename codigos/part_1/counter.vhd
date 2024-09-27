@@ -12,7 +12,7 @@ entity counter is
         clk : in STD_LOGIC;
         enable : in STD_LOGIC;
         reset : in STD_LOGIC;
-        counter : buffer INTEGER range max to min := min
+        counter : buffer INTEGER range min to max := min
     );
 end entity;
 
@@ -33,6 +33,5 @@ begin
                 counter <= counter;
         end if;
     end if;
-    end process;
-
+    end process; 
 end architecture;
