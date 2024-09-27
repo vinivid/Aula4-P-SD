@@ -87,7 +87,9 @@ begin
                 else 
                     out_led <= '0';
                 end if;
-            end if; 
+            end if;
+        elsif (enable = '0') then 
+            out_led <= '0'; 
         end if;
     end process;
     

@@ -20,10 +20,10 @@ architecture Behaviour of counter is
 begin
     process (clk, reset)
     begin
-        if (rising_edge(clk)) then
-            if (reset =  '1') then
-                counter <= min;
-            elsif (enable = '1') then
+        if (reset =  '1') then
+            counter <= min;
+        elsif (rising_edge(clk)) then
+            if (enable = '1') then
                 if (counter = modulo) then 
                     counter <= min;
                 else 

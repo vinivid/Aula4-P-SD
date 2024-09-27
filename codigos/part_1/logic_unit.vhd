@@ -66,13 +66,13 @@ architecture Behaviour of logic_unit is
 
     signal size_of_word : STD_LOGIC_VECTOR (3 downto 0);
     signal control_counter_number : INTEGER range 0 to 3;
-    signal control_counter_clock : STD_LOGIC;
-    signal control_counter_reset : STD_LOGIC;
+    signal control_counter_clock : STD_LOGIC := '0';
+    signal control_counter_reset : STD_LOGIC := '0';
     signal current_symbol : STD_LOGIC;
-    signal proc_enable : STD_LOGIC;
-    signal is_proc_enabled : STD_LOGIC;
+    signal proc_enable : STD_LOGIC := '0';
+    signal is_proc_enabled : STD_LOGIC := '0';
 begin
-    
+
     control_counter: counter
      generic map(
         modulo => 3,
@@ -93,8 +93,8 @@ begin
      port map(
         clk => clk,
         reset => reset,
-        enable => '1',
-        data_in(0) => enable,
+        enable =>  '1',
+        data_in(0) => proc_enable,
         data_out(0) => is_proc_enabled
     );
 
@@ -134,12 +134,12 @@ begin
     begin
         if (reset = '1') then
             control_counter_reset <= '1';
-        elsif (to_integer(unsigned(size_of_word)) = control_counter_number) then
-            control_counter_reset <= '1';
-            proc_enable <= '0';
-        elsif (enable = '1') then 
+        elsif (enable = '1') then
             proc_enable <= '1';
             control_counter_reset <= '0';
+        elsif (to_integer(unsigned(size_of_word)) = control_counter_number) then 
+            proc_enable <= '0';
+            control_counter_reset <= '1';
         else
             control_counter_reset <= '0';
         end if;

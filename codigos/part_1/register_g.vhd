@@ -19,10 +19,10 @@ architecture Behavour of register_g is
 begin
     process (clk, reset)
     begin
-        if (rising_edge(clk)) then 
-            if (reset = '1') then
-                data_out <= (others => '0');
-            elsif (enable = '1') then
+        if (reset = '1') then
+            data_out <= (others => '0');
+        elsif (rising_edge(clk)) then 
+            if (enable = '1') then
                 data_out <= data_in;
             end if;
         end if;
