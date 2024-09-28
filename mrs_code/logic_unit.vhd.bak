@@ -25,7 +25,7 @@ architecture Behaviour of logic_unit is
             clk : in STD_LOGIC;
             enable : in STD_LOGIC;
             reset : in STD_LOGIC;
-            counter : buffer INTEGER range min to max := min
+            counter : buffer INTEGER range max to min := min
         );
     end component;
 
@@ -71,10 +71,8 @@ architecture Behaviour of logic_unit is
     signal current_symbol : STD_LOGIC;
     signal proc_enable : STD_LOGIC := '0';
     signal is_proc_enabled : STD_LOGIC := '0';
-	 signal n_reset : STD_LOGIc := '0';
 begin
-	n_reset <= not reset;
-		
+
     control_counter: counter
      generic map(
         modulo => 6,
@@ -94,7 +92,7 @@ begin
     )
      port map(
         clk => clk,
-        reset => n_reset,
+        reset => reset,
         enable =>  '1',
         data_in(0) => proc_enable,
         data_out(0) => is_proc_enabled
@@ -106,7 +104,7 @@ begin
     )
      port map(
         clk => clk,
-        reset => n_reset,
+        reset => reset,
         enable => enable,
         data_in => word_size,
         data_out => size_of_word
@@ -115,8 +113,8 @@ begin
     shift_word_symbols: shift_symbol
      port map(
         clk => clk,
-        enable => proc_enable,
-        reset => n_reset,
+        enable => enable,
+        reset => reset,
         pos => control_counter_number,
         data_in => word_symbols,
         data_out => current_symbol
@@ -126,7 +124,7 @@ begin
      port map(
         clk => clk,
         enable => is_proc_enabled,
-        reset => n_reset,
+        reset => reset,
         word_bit => current_symbol,
         out_led => out_led,
         next_bit => control_counter_clock
@@ -134,9 +132,9 @@ begin
 
     process (clk, reset)
     begin
-        if (reset = '0') then
+        if (reset = '1') then
             control_counter_reset <= '1';
-        elsif (enable = '0') then
+        elsif (enable = '1') then
             proc_enable <= '1';
             control_counter_reset <= '0';
         elsif (to_integer(unsigned(size_of_word)) = control_counter_number) then 

@@ -1,0 +1,213 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'clk'
+Slack : -4.384
+TNS   : -153.615
+
+Type  : Slow 1100mV 85C Model Setup 'enable'
+Slack : -3.069
+TNS   : -3.069
+
+Type  : Slow 1100mV 85C Model Setup 'logic_unit:main_logic|proc_symbol:main_proc|next_bit'
+Slack : -1.593
+TNS   : -7.726
+
+Type  : Slow 1100mV 85C Model Hold 'clk'
+Slack : 0.430
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'enable'
+Slack : 0.638
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'logic_unit:main_logic|proc_symbol:main_proc|next_bit'
+Slack : 0.857
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'logic_unit:main_logic|proc_symbol:main_proc|next_bit'
+Slack : -4.662
+TNS   : -23.292
+
+Type  : Slow 1100mV 85C Model Recovery 'clk'
+Slack : -0.905
+TNS   : -34.630
+
+Type  : Slow 1100mV 85C Model Removal 'clk'
+Slack : 0.938
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'logic_unit:main_logic|proc_symbol:main_proc|next_bit'
+Slack : 1.784
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -0.538
+TNS   : -40.732
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'logic_unit:main_logic|proc_symbol:main_proc|next_bit'
+Slack : -0.538
+TNS   : -3.855
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'enable'
+Slack : 0.260
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'clk'
+Slack : -4.571
+TNS   : -151.430
+
+Type  : Slow 1100mV 0C Model Setup 'enable'
+Slack : -3.008
+TNS   : -3.008
+
+Type  : Slow 1100mV 0C Model Setup 'logic_unit:main_logic|proc_symbol:main_proc|next_bit'
+Slack : -1.641
+TNS   : -7.916
+
+Type  : Slow 1100mV 0C Model Hold 'clk'
+Slack : 0.389
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'enable'
+Slack : 0.450
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'logic_unit:main_logic|proc_symbol:main_proc|next_bit'
+Slack : 0.832
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'logic_unit:main_logic|proc_symbol:main_proc|next_bit'
+Slack : -4.729
+TNS   : -23.625
+
+Type  : Slow 1100mV 0C Model Recovery 'clk'
+Slack : -0.831
+TNS   : -31.527
+
+Type  : Slow 1100mV 0C Model Removal 'clk'
+Slack : 0.897
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'logic_unit:main_logic|proc_symbol:main_proc|next_bit'
+Slack : 1.686
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -0.538
+TNS   : -41.126
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'logic_unit:main_logic|proc_symbol:main_proc|next_bit'
+Slack : -0.538
+TNS   : -3.847
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'enable'
+Slack : 0.292
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'enable'
+Slack : -1.943
+TNS   : -1.943
+
+Type  : Fast 1100mV 85C Model Setup 'clk'
+Slack : -1.928
+TNS   : -54.579
+
+Type  : Fast 1100mV 85C Model Setup 'logic_unit:main_logic|proc_symbol:main_proc|next_bit'
+Slack : -0.499
+TNS   : -2.273
+
+Type  : Fast 1100mV 85C Model Hold 'clk'
+Slack : -0.061
+TNS   : -0.061
+
+Type  : Fast 1100mV 85C Model Hold 'logic_unit:main_logic|proc_symbol:main_proc|next_bit'
+Slack : 0.363
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'enable'
+Slack : 0.450
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'logic_unit:main_logic|proc_symbol:main_proc|next_bit'
+Slack : -2.070
+TNS   : -10.346
+
+Type  : Fast 1100mV 85C Model Recovery 'clk'
+Slack : -0.033
+TNS   : -0.473
+
+Type  : Fast 1100mV 85C Model Removal 'clk'
+Slack : 0.436
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'logic_unit:main_logic|proc_symbol:main_proc|next_bit'
+Slack : 0.758
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -0.329
+TNS   : -5.124
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'enable'
+Slack : -0.025
+TNS   : -0.053
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'logic_unit:main_logic|proc_symbol:main_proc|next_bit'
+Slack : 0.163
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'clk'
+Slack : -1.788
+TNS   : -46.527
+
+Type  : Fast 1100mV 0C Model Setup 'enable'
+Slack : -1.723
+TNS   : -1.723
+
+Type  : Fast 1100mV 0C Model Setup 'logic_unit:main_logic|proc_symbol:main_proc|next_bit'
+Slack : -0.417
+TNS   : -1.953
+
+Type  : Fast 1100mV 0C Model Hold 'clk'
+Slack : -0.187
+TNS   : -0.318
+
+Type  : Fast 1100mV 0C Model Hold 'logic_unit:main_logic|proc_symbol:main_proc|next_bit'
+Slack : 0.310
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'enable'
+Slack : 0.337
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'logic_unit:main_logic|proc_symbol:main_proc|next_bit'
+Slack : -1.969
+TNS   : -9.841
+
+Type  : Fast 1100mV 0C Model Recovery 'clk'
+Slack : 0.052
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'clk'
+Slack : 0.399
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'logic_unit:main_logic|proc_symbol:main_proc|next_bit'
+Slack : 0.673
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -0.319
+TNS   : -5.222
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'enable'
+Slack : -0.010
+TNS   : -0.010
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'logic_unit:main_logic|proc_symbol:main_proc|next_bit'
+Slack : 0.164
+TNS   : 0.000
+
+------------------------------------------------------------
