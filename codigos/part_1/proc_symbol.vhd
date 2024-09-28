@@ -63,6 +63,8 @@ begin
             reset_counter <= '1';
             out_led <= '0';
             next_bit <= '0';
+        elsif (enable = '0') then 
+            out_led <= '0'; 
         elsif (rising_edge(clk) and enable = '1')then
             reset_counter <= '0';
             next_bit <= '0';
@@ -88,8 +90,6 @@ begin
                     out_led <= '0';
                 end if;
             end if;
-        elsif (enable = '0') then 
-            out_led <= '0'; 
         end if;
     end process;
     

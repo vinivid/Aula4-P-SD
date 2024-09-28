@@ -1,5 +1,13 @@
 [libraries]
 
+lib7.files = [
+	'morse_fpga.vhd',
+]
+
+lib6.files = [
+	'input_unit.vhd',
+]
+
 lib5.files = [
 	'logic_unit.vhd',
 ]

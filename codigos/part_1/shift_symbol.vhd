@@ -8,7 +8,7 @@ entity shift_symbol is
         enable : IN STD_LOGIC;
         reset : IN STD_LOGIC;
         pos : IN INTEGER := 0;
-        data_in : IN STD_LOGIC_VECTOR (3 downto 0);
+        data_in : IN STD_LOGIC_VECTOR (4 downto 0);
         data_out : OUT STD_LOGIC := '0'
     );
 end entity shift_symbol;
@@ -27,12 +27,12 @@ architecture Behaviour of shift_symbol is
         );
     end component;
 
-    signal symbols : STD_LOGIC_VECTOR (3 downto 0);
+    signal symbols : STD_LOGIC_VECTOR (4 downto 0);
 begin
 
     reg_symbols: register_g
      generic map(
-        qtt_of_bits => 4
+        qtt_of_bits => 5
     )
      port map(
         clk => clk,

@@ -8,7 +8,7 @@ entity logic_unit is
         reset : IN STD_LOGIC;
         enable : IN STD_LOGIC;
         word_size : IN STD_LOGIC_VECTOR (3 downto 0);
-        word_symbols : IN STD_LOGIC_VECTOR(3 downto 0);
+        word_symbols : IN STD_LOGIC_VECTOR(4 downto 0);
         out_led : OUT STD_LOGIC
     );
 end entity logic_unit;
@@ -48,7 +48,7 @@ architecture Behaviour of logic_unit is
             enable : IN STD_LOGIC;
             reset : IN STD_LOGIC;
             pos : IN INTEGER := 0;
-            data_in : IN STD_LOGIC_VECTOR (3 downto 0);
+            data_in : IN STD_LOGIC_VECTOR (4 downto 0);
             data_out : OUT STD_LOGIC := '0'
         );
     end component;
@@ -65,7 +65,7 @@ architecture Behaviour of logic_unit is
     end component;
 
     signal size_of_word : STD_LOGIC_VECTOR (3 downto 0);
-    signal control_counter_number : INTEGER range 0 to 3;
+    signal control_counter_number : INTEGER range 0 to 6;
     signal control_counter_clock : STD_LOGIC := '0';
     signal control_counter_reset : STD_LOGIC := '0';
     signal current_symbol : STD_LOGIC;
@@ -75,8 +75,8 @@ begin
 
     control_counter: counter
      generic map(
-        modulo => 3,
-        max => 3,
+        modulo => 6,
+        max => 8,
         min => 0
     )
      port map(
