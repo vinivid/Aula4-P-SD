@@ -4,7 +4,7 @@ use IEEE.numeric_std.all;
 
 entity input_unit is
     port (
-		  enable : IN STD_LOGIc;
+		enable : IN STD_LOGIc;
         word_entry : IN STD_LOGIC_VECTOR(2 downto 0);
         word_size : OUT STD_LOGIC_VECTOR(3 downto 0);
         word_symbols : OUT STD_LOGIC_VECTOR(4 downto 0)

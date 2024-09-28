@@ -15,7 +15,7 @@ end entity morse_fpga;
 architecture Behaviour of morse_fpga is
     component input_unit is
         port (
-				enable : IN STD_LOGIC;
+			enable : IN STD_LOGIC;
             word_entry : IN STD_LOGIC_VECTOR(2 downto 0);
             word_size : OUT STD_LOGIC_VECTOR(3 downto 0);
             word_symbols : OUT STD_LOGIC_VECTOR(4 downto 0)
@@ -39,7 +39,7 @@ begin
     
     main_input: input_unit
      port map(
-		  enable => enable,
+		enable => enable,
         word_entry => word_entry,
         word_size => word_size,
         word_symbols => word_symbols
