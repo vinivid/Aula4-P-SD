@@ -8,7 +8,7 @@ Ryan Diniz Pereira - 15590907
 
 A lógica utilizada para a implementação é bem simples. Existem dois componentes básicos que são as registradoras e os contadores.
 
-Existem dois contadores e três registradoras. Uma registradora é utilizada para salvar o tamanho da palavra, outra é utilizada para salvar a representação de uma palavra em binário, e, a ultima é utilizada para lembrar se o processador de símbolos está ligado.
+Existem dois contadores e três registradoras. Uma registradora é utilizada para salvar o tamanho da palavra, outra é utilizada para salvar a representação de uma palavra em binário, e, a última é utilizada para lembrar se o processador de símbolos está ligado.
 
 Os dois contadores têm as seguintes funções: Um deles é um contador que conta até quatro, ele é responsável por controlar duas coisas. A primeira é a registradora dos símbolos em que o valor do contador está seré o índice do vetor do símbolo a ser enviado para o processador de símbolos, a outra é checar se a palavra acabou ao comparar o valor contado até o valor dado como o tamanho da palavra, se eles forem iguais ele desabilita o processador e nenhum digito do código é mostrado mais. O clock deste contador é controlado pelo processador de símbolos. Toda vez que ele processa um símbolo ele pede o próximo bit do código até processar a palavra.
 
