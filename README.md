@@ -6,7 +6,7 @@ Ryan Diniz Pereira - 15590907
 
 ### Código Morse
 
-A lógica utilizada para a implementação e é bem simples. Existem dois componentes básicos que são as registradoras e o os contadores.
+A lógica utilizada para a implementação e é bem simples. Existem dois componentes básicos que são as registradoras e os contadores.
 
 Existem dois contadores e tres registradoras. Uma registradora é utilizada para salvar o tamanho da palavra, outra é utilizada para salvar a representação de uma palavra em binário a ultima é utilizada para lembrar se o processador de símbolos esta ligado.
 
